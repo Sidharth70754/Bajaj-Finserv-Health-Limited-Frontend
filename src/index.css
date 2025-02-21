@@ -1,0 +1,155 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 126, 179, 0.8), transparent);
+  animation: rotateLight 6s linear infinite;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes rotateLight {
+  0% {
+    top: 10%;
+    left: 10%;
+  }
+  25% {
+    top: 30%;
+    left: 70%;
+  }
+  50% {
+    top: 70%;
+    left: 50%;
+  }
+  75% {
+    top: 50%;
+    left: 20%;
+  }
+  100% {
+    top: 10%;
+    left: 10%;
+  }
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.6);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 126, 179, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255, 126, 179, 1);
+  }
+}
+
+.css-2b097c-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.css-2b097c-container .css-1uccc91-singleValue {
+  color: #fff !important;
+}
+
+.css-2b097c-container .css-1okebmr-indicatorSeparator {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+select {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+select:hover {
+  border-color: #ff7eb3;
+  box-shadow: 0 0 12px rgba(255, 126, 179, 0.8);
+}
+
+
+pre {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
+  overflow-x: auto;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  color: #ffea00;
+}
+
+button {
+  background: linear-gradient(90deg, #ff7eb3, #ff4f8b);
+  border: none;
+  padding: 14px 28px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 126, 179, 0.5);
+  margin-top: 20px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff4f8b, #ff1e68);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 79, 139, 0.9);
+}
+
+
+@media screen and (max-width: 600px) {
+  select {
+      width: 90%;
+  }
+
+  button {
+      width: 90%;
+  }
+
+  pre {
+      font-size: 14px;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+  }
+}
